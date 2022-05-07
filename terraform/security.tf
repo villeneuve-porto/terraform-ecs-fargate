@@ -2,7 +2,7 @@
 
 # ALB Security Group: Edit to restrict access to the application
 resource "aws_security_group" "lb" {
-  name        = "cb-load-balancer-security-group"
+  name        = var.aws_security_group_lb
   description = "controls access to the ALB"
   vpc_id      = aws_vpc.main.id
 

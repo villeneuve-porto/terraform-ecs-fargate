@@ -1,46 +1,48 @@
 # variables.tf
+//  description = "The AWS region things are created in"
+variable "aws_region" {}
 
-variable "aws_region" {
-  description = "The AWS region things are created in"
-  default     = "us-west-2"
-}
+//  description = "ECS task execution role name"
+variable "ecs_task_execution_role_name" {}
 
-variable "ecs_task_execution_role_name" {
-  description = "ECS task execution role name"
-  default = "myEcsTaskExecutionRole"
-}
+//  description = "Number of AZs to cover in a given region"
+variable "az_count" {}
 
-variable "az_count" {
-  description = "Number of AZs to cover in a given region"
-  default     = "2"
-}
+variable "app_name" {}
 
-variable "app_image" {
-  description = "Docker image to run in the ECS cluster"
-  default     = "bradfordhamilton/crystal_blockchain:latest"
-}
+//  description = "Docker image to run in the ECS cluster"
+variable "app_image" {}
 
-variable "app_port" {
-  description = "Port exposed by the docker image to redirect traffic to"
-  default     = 3000
-}
+//  description = "Port exposed by the docker image to redirect traffic to"
+variable "app_port" {}
 
-variable "app_count" {
-  description = "Number of docker containers to run"
-  default     = 3
-}
+//  description = "Number of docker containers to run"
+variable "app_count" {}
 
-variable "health_check_path" {
-  default = "/"
-}
+variable "health_check_path" {}
 
-variable "fargate_cpu" {
-  description = "Fargate instance CPU units to provision (1 vCPU = 1024 CPU units)"
-  default     = "1024"
-}
+//  description = "Fargate instance CPU units to provision (1 vCPU = 1024 CPU units)"
+variable "fargate_cpu" {}
 
-variable "fargate_memory" {
-  description = "Fargate instance memory to provision (in MiB)"
-  default     = "2048"
-}
+//  description = "Fargate instance memory to provision (in MiB)"
+variable "fargate_memory" {}
 
+variable "aws_alb_name" {}
+variable "aws_alb_target_group" {}
+
+# logs.tf
+
+# Set up CloudWatch group and log stream and retain logs for 30 days
+variable "app_log_group_name" {}
+variable "app_log_stream_name" {}
+
+# security.tf
+variable "aws_security_group_lb" {}
+variable "aws_security_group_tasks" {}
+
+# ecs.tf
+variable "aws_ecs_cluster_name" {}
+//variable "decisioning-app-task" {}
+variable "family_name" {}
+variable "aws_ecs_service_name" {}
+variable "container_name" {}
