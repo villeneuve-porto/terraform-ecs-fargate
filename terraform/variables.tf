@@ -2,6 +2,9 @@
 //  description = "The AWS region things are created in"
 variable "aws_region" {}
 
+//variable "aws_s3_bucket_name" {}
+//variable "environment_name" {}
+
 //  description = "ECS task execution role name"
 variable "ecs_task_execution_role_name" {}
 

@@ -18,12 +18,12 @@ data "template_file" "cb_app" {
   template = file("./templates/ecs/decisioning_app.json.tpl")
 
   vars = {
-    app_name       = var.app_name
-    app_image      = var.app_image
-    app_port       = var.app_port
-    fargate_cpu    = var.fargate_cpu
-    fargate_memory = var.fargate_memory
-    aws_region     = var.aws_region
+    app_name           = var.app_name
+    app_image          = var.app_image
+    app_port           = var.app_port
+    fargate_cpu        = var.fargate_cpu
+    fargate_memory     = var.fargate_memory
+    aws_region         = var.aws_region
     app_log_group_name = var.app_log_group_name
   }
 }

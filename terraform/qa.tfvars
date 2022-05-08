@@ -31,7 +31,7 @@ app_log_group_name  = "/ecs/decisioning-app-qa"
 app_log_stream_name = "decisioning-app-log-group-qa"
 
 # security.tf
-aws_security_group_lb = "decisioning-qa-alb-security-group"
+aws_security_group_lb    = "decisioning-qa-alb-security-group"
 aws_security_group_tasks = "decisioning-qa-ecs-tasks-security-group"
 
 # ecs.tf
