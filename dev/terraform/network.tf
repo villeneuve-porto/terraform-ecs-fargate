@@ -6,7 +6,7 @@ data "aws_availability_zones" "available" {
 
 resource "aws_vpc" "main" {
   //cidr_block = "10.0.0.0/16"
-  cidr_block = "10.0.0.0/16"
+  cidr_block = "10.0.0.0/22"
   enable_dns_support = var.vpc_enable_dns_support
   enable_dns_hostnames = var.vpc_enable_dns_hostnames
 }
@@ -14,7 +14,7 @@ resource "aws_vpc" "main" {
 # Create var.az_count private subnets, each in a different AZ
 resource "aws_subnet" "private" {
   count             = var.az_count
-  cidr_block        = cidrsubnet(aws_vpc.main.cidr_block, 8, count.index)
+  cidr_block        = cidrsubnet(aws_vpc.main.cidr_block, 3, count.index)
   availability_zone = data.aws_availability_zones.available.names[count.index]
   vpc_id            = aws_vpc.main.id
 }

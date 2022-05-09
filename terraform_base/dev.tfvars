@@ -9,14 +9,14 @@ vpc_enable_dns_support= "true"
 
 vpc_enable_dns_hostnames = "true"
 
-ecs_task_execution_role_name = "myEcsTaskExecutionRole"
+ecs_task_execution_role_name = "myEcsTaskExecutionRole-dev"
 
 az_count = "3"
 
 app_name = "decisioning-dev"
 
-app_image = "986296009542.dkr.ecr.eu-west-1.amazonaws.com/decisioning-service-qa:68192736af97e7a5d7e993c3418dae1db752a12b-qa"
-
+//app_image = "986296009542.dkr.ecr.eu-west-1.amazonaws.com/decisioning-service-qa:68192736af97e7a5d7e993c3418dae1db752a12b-qa"
+app_image = "httpd"
 app_port = 80
 
 app_count = 3
