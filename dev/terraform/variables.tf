@@ -1,6 +1,7 @@
 # variables.tf
 //  description = "The AWS region things are created in"
 variable "aws_region" {}
+variable "aws_vpc" {}
 
 variable "vpc_enable_dns_support" {}
 

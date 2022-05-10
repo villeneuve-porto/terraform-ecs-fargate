@@ -2,7 +2,10 @@
 
 aws_region = "eu-west-3"
 
+aws_vpc = "selina-dev-vpc"
+
 aws_s3_bucket_name = "selina-finance-remote-state"
+
 environment_name   = "dev"
 
 vpc_enable_dns_support= "true"

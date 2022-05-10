@@ -5,7 +5,7 @@ data "aws_availability_zones" "available" {
 }
 
 resource "aws_vpc" "main" {
-  cidr_block = "10.1.0.0/22"
+  cidr_block = "10.1.0.0/23"
   enable_dns_support = var.vpc_enable_dns_support
   enable_dns_hostnames = var.vpc_enable_dns_hostnames
 }
