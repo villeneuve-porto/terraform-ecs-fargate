@@ -52,5 +52,9 @@ variable "aws_security_group_tasks" {}
 variable "aws_ecs_cluster_name" {}
 //variable "decisioning-app-task" {}
 variable "family_name" {}
+variable "family_name_02" {}
+variable "family_name_03" {}
 variable "aws_ecs_service_name" {}
+variable "aws_ecs_service_name_02" {}
+variable "aws_ecs_service_name_03" {}
 variable "container_name" {}
