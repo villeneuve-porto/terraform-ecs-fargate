@@ -1,8 +1,14 @@
 # prod.tfvars
 
-aws_region = "us-east-1"
-//aws_s3_bucket_name = "selina-terraform-remote-us"
-//environment_name   = "prod"
+aws_region = "eu-west-3"
+
+aws_s3_bucket_name = "selina-finance-remote-state"
+
+environment_name ="prod"
+
+vpc_enable_dns_support= "true"
+
+vpc_enable_dns_hostnames = "true"
 
 ecs_task_execution_role_name = "myEcsTaskExecutionRole"
 
@@ -18,9 +24,9 @@ app_count = 3
 
 health_check_path = "/"
 
-fargate_cpu = "1024"
+fargate_cpu = "256"
 
-fargate_memory = "2048"
+fargate_memory = "512"
 
 #variables alb.tf
 aws_alb_name         = "decisioning-alb-prod"
